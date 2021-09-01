@@ -28,5 +28,8 @@ c5 = Cohort.create(
 puts "Seeding students..."
 # TODO: create seed data for students
 # check your schema and make sure to create students with all the necessary data
+20.times do
+  Student.create(name: "#{Faker::Name.name}", age: rand(20..27), email: "#{Faker::Name.first_name}@gmail.com", cohort_id: rand(1..20))
+end
 
 puts "Done!"
